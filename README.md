@@ -29,7 +29,39 @@
     # Query a BigQuery table
     bq query --nouse_legacy_sql 'SELECT * FROM `pyflink-gke-poc.testUS.dummy_string_types`'
     ```
+The cleanest approach to collaborate in 1 folder.
 
+1. **Create a shared directory**, e.g.:
+
+   ```bash
+   sudo mkdir /opt/shared-code
+   ```
+
+2. **Change the group ownership** to a common group both you and your friend are in (or create a new group):
+
+   ```bash
+   sudo groupadd devgroup           # create new group (if needed)
+   sudo chown :devgroup /opt/shared-code
+   ```
+
+3. **Add both users to that group**:
+
+   ```bash
+   sudo usermod -aG devgroup ksbrocks_bulani
+   sudo usermod -aG devgroup your_friend_username
+   ```
+
+   ✅ You’ll need to log out and log back in for group changes to take effect.
+
+4. **Set permissions to allow group members to read/write**:
+
+   ```bash
+   sudo chmod 2775 /opt/shared-code
+   ```
+
+   * The `2` (setgid bit) ensures all new files/folders inside inherit the group.
+
+5. **Put VM code here**
 ---
 
 ### Python Installation
