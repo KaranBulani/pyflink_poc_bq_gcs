@@ -119,11 +119,11 @@ Follow these steps to install Python 3.9 and essential tools on Ubuntu 22:
 
     1. **Create a virtual environment:**
         ```sh
-        python3.9 -m venv ~/flink_env
+        python3.9 -m venv flink_env
         ```
     2. **Activate the virtual environment:**
         ```sh
-        source ~/flink_env/bin/activate
+        source flink_env/bin/activate
         ```
     3. **Install PyFlink (version 1.17.2 mentioned [here](https://github.com/GoogleCloudDataproc/flink-bigquery-connector?tab=readme-ov-file#maven-central) ):**
         ```sh
