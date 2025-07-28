@@ -131,6 +131,13 @@ Follow these steps to install Python 3.9 and essential tools on Ubuntu 22:
         ```
         This ensures that PyFlink and its dependencies are installed in an isolated, user-owned environment.
 
+        A. **Flink setup tarball : needed in production setup**
+        ```sh
+        wget https://downloads.apache.org/flink/flink-1.17.2/flink-1.17.2-bin-scala_2.12.tgz
+        tar -xvzf flink-1.17.2-bin-scala_2.12.tgz
+        cd flink-1.17.2
+        ```
+
     4. **Deactivate the virtual environment when finished:**
         ```sh
         deactivate
