@@ -1,0 +1,4 @@
+For GCS add these three jars:
+file:///opt/shared-code/flink-1.17.2/opt/flink-gs-fs-hadoop-1.17.2.jar;
+file:///opt/shared-code/flink-1.17.2/lib/flink-csv-1.17.2.jar;
+file:///opt/shared-code/flink-1.17.2/lib/flink-json-1.17.2.jar
